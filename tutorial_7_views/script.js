@@ -198,12 +198,12 @@ document.addEventListener('DOMContentLoaded', function() {
             tdResult.appendChild(pill);
 
             const tdHands = document.createElement('td');
-            const hands = getComplianceIndicator(p.hand_washing);
+            const hands = getComplianceIndicator(p.proper_hand_washing);
             tdHands.className = `compliance-indicator ${hands === '✓' ? 'pass' : (hands === '✗' ? 'fail' : '')}`;
             tdHands.textContent = hands;
 
             const tdTemp = document.createElement('td');
-            const temp = getComplianceIndicator(p.food_temperature);
+            const temp = getComplianceIndicator(p.cooking_time_and_temperature);
             tdTemp.className = `compliance-indicator ${temp === '✓' ? 'pass' : (temp === '✗' ? 'fail' : '')}`;
             tdTemp.textContent = temp;
 
